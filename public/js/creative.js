@@ -45,4 +45,24 @@
     // Initialize WOW.js Scrolling Animations
     new WOW().init();
 
+    $('#submit').on('click', function() {
+        var nameValue = $('#nameField').val();
+        var emailValue = $('#emailField').val();
+        var msgValue = $('#msgField').val();
+
+        $.ajax({
+            cache:false,
+            url: "https://docs.google.com/forms/d/1b9XArolA6aRtcIENIwxOsRYeLNdcch8FS1X6BkOF_VI/formResponse",
+            type: "POST",
+            data: {
+                "entry_1802656120" : nameValue,
+                "entry_1443533689" : emailValue,
+                "entry_584157804" : msgValue
+            },
+            success: function(data) {
+                //$("#weather-temp").html("<strong>" + data + "</strong> degrees");
+            }
+        });
+    });
+
 })(jQuery); // End of use strict
