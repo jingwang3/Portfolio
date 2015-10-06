@@ -40,6 +40,10 @@ h6 {
     .sans-serif-font;
 }
 
+h2 {
+    font-size: 2.5em;
+}
+
 p {
     font-size: 16px;
     line-height: 1.5;
@@ -55,8 +59,22 @@ p {
     color: white;
 }
 
+.bg-white {
+    background-color: @theme-white;
+    color: #333333;
+}
+
+
 .text-faded {
-    color: fade(white, 70%);
+    color: fade(black, 70%);
+}
+
+.text-white {
+    color: white;
+}
+
+.text-shadowed {
+    text-shadow: 0 1px 15px #999;
 }
 
 section {
@@ -159,7 +177,8 @@ header {
     min-height: auto;
     .background-cover;
     background-position: center;
-    background-image: url('../img/header.jpg');
+    background-image: url('../img/pineapple.jpg');
+    background-attachment: fixed;
     text-align: center;
     color: white;
     .header-content {
@@ -211,6 +230,12 @@ header {
 
 // Sections
 
+#about{
+    p{
+        font-size:1.875em;
+    }
+}
+
 .section-heading {
     margin-top: 0;
 }
@@ -235,7 +260,7 @@ header {
         color: white;
         opacity: 0;
         display: block;
-        background: fade(@theme-primary, 90%);
+        background: fade(black, 40%);
         position: absolute;
         bottom: 0;
         text-align: center;
@@ -310,7 +335,7 @@ header {
 .btn {
     .sans-serif-font;
     border: none;
-    border-radius: 300px;
+    // border-radius: 300px;
     font-weight: 700;
     text-transform: uppercase;
 }
