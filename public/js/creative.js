@@ -60,9 +60,12 @@
                 "entry_584157804" : msgValue
             },
             success: function(data) {
-                //$("#weather-temp").html("<strong>" + data + "</strong> degrees");
+                
             }
         });
+        $('#contactForm').addClass('hidden');
+        $('#thankYouMsg').removeClass('hidden');
+        $('#thankYouMsg h2').addClass('wow bounceIn')
     });
 
 })(jQuery); // End of use strict
